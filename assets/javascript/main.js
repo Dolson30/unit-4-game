@@ -24,6 +24,7 @@ function newGame()
     diamondValue = Math.floor(Math.random() * 12) + 1;
     $("#diamond").val(diamondValue);
     $("#matchNum").text(finalNumber.toString());
+    $("#status").text("Start clicking jewels!");
     userNumber = 0;
     $("#score").text(userNumber);
     gameOver = false;
@@ -49,6 +50,7 @@ $(".jewel").click(function()
         $("#matchNum").text("You Win! Click a jewel to restart the game!");
         wins = wins + 1;
         $("#wins").text("Your Wins: " + wins);
+        $("#status").text("Click a jewel to restart!");
         gameOver = true;
     }
     else if(userNumber > finalNumber)
@@ -56,6 +58,7 @@ $(".jewel").click(function()
         $("#matchNum").text("You Lose! Click a jewel to restart the game!");
         losses = losses + 1;
         $("#losses").text("Your Losses: " + losses);
+        $("#status").text("Click a jewel to restart!");
         gameOver = true;
     }
     else
