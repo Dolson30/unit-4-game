@@ -1,0 +1,78 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 bg-primary">
+                <h1>Crystal Collector!</h1>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4"></div>
+        </div>
+        <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+            <div class="col-sm-6 col-md-6 col-lg-6 bg-primary">
+                <p>You will be given a random number at the start og the game</p>
+                <P>There are 4 crystals below, each with a random number between 1-12 assigned to them.</P>
+                <p>Clicking on a crystal will add its value to your score. Matching your score with the random number will win you the game!</p>
+                <p>The crystal values will reset each time a new game is started.</p>
+                <h3>Click a jewel to start the game!</h3>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        </div>
+
+        <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 bg-info text-center">
+                    <h2 id="matchNum">0</h2>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 bg-info text-center" style="height:63px;">
+                    <p id="wins">Your Wins: 0</p>
+                    <p id="losses">Your Losses: 0</p>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+            <img id="ruby" class="img-fluid jewel" src="assets/images/ruby.png" value="0" style="padding:5px;">
+            <img id="sapphire" class="img-fluid jewel" src="assets/images/sapphire.png" value="0" style="padding:5px;">
+            <img id="emerald" class="img-fluid jewel" src="assets/images/emerald.png" value="0" style="padding:5px;">
+            <img id="diamond" class="img-fluid jewel" src="assets/images/diamond.png" value="0" style="padding:5px;">
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+            
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4 text-center"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 bg-info text-center">
+                <h2>Your total is:</h2>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 text-center"></div>
+
+        </div>
+        <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-4 text-center"></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 bg-info text-center">
+                    <h2 id="score">0</h2>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 text-center"></div>
+    
+            </div>
+
+
+    </div>
+
+
+</body>
+</html>
