@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 function newGame()
 {
-    finalNumber = Math.floor(Math.random() * 120) + 19;
+    finalNumber = Math.floor(Math.random() * 101) + 19;
     rubyValue = Math.floor(Math.random() * 12) + 1;
     $("#ruby").val(rubyValue);
     sapphireValue = Math.floor(Math.random() * 12) + 1;
