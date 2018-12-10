@@ -7,6 +7,7 @@ var diamondValue = "0";
 var gameOver = true;
 var wins=0;
 var losses=0;
+var options = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 
 $(document).ready(function(){
@@ -14,16 +15,37 @@ $(document).ready(function(){
 
 function newGame()
 {
+    options = [1,2,3,4,5,6,7,8,9,10,11,12];
+
     finalNumber = Math.floor(Math.random() * 101) + 19;
-    rubyValue = Math.floor(Math.random() * 12) + 1;
+
+    index = Math.floor(Math.random() * 11);
+    rubyValue = options[index];
     $("#ruby").val(rubyValue);
-    sapphireValue = Math.floor(Math.random() * 12) + 1;
+    options.splice(index, 1);
+
+
+    index = Math.floor(Math.random() * 10);
+    sapphireValue = options[index];
     $("#sapphire").val(sapphireValue);
-    emeraldValue = Math.floor(Math.random() * 12) + 1;
+    options.splice(index, 1);
+
+
+    index = Math.floor(Math.random() * 9);
+    emeraldValue = options[index];
     $("#emerald").val(emeraldValue);
-    diamondValue = Math.floor(Math.random() * 12) + 1;
+    options.splice(index, 1);
+
+
+   index = Math.floor(Math.random() * 8);
+   diamondValue = options[index];
     $("#diamond").val(diamondValue);
+    options.splice(index, 1);
+
+
     $("#matchNum").text(finalNumber.toString());
+    $('#banner').removeClass('bg-danger').addClass('bg-info');
+    $('#banner').removeClass('bg-success').addClass('bg-info');
     $("#status").text("Start clicking jewels!");
     userNumber = 0;
     $("#score").text(userNumber);
@@ -31,6 +53,7 @@ function newGame()
 
 
 }
+
 
 $(".jewel").click(function()
 {
@@ -47,7 +70,8 @@ $(".jewel").click(function()
 
     if(userNumber === finalNumber)
     {
-        $("#matchNum").text("You Win! Click a jewel to restart the game!");
+        $("#matchNum").text("You Win!");
+        $('#banner').removeClass('bg-info').addClass('bg-success');
         wins = wins + 1;
         $("#wins").text("Your Wins: " + wins);
         $("#status").text("Click a jewel to restart!");
@@ -55,7 +79,8 @@ $(".jewel").click(function()
     }
     else if(userNumber > finalNumber)
     {
-        $("#matchNum").text("You Lose! Click a jewel to restart the game!");
+        $("#matchNum").text("You Lose!");
+        $('#banner').removeClass('bg-info').addClass('bg-danger');
         losses = losses + 1;
         $("#losses").text("Your Losses: " + losses);
         $("#status").text("Click a jewel to restart!");
